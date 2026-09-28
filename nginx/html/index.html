@@ -1,9 +1,65 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>나의 캡스톤 소개</title><link rel="stylesheet" href="style.css"><script defer src="app.js"></script></head>
-<body><main><header><p class="eyebrow">WEEK 5 · CAPSTONE</p><h1 id="project-title">TODO: 프로젝트 이름</h1><p>누적 조회수 <strong id="view-count">불러오는 중</strong></p></header>
-<!-- TODO: AI를 활용해 디자인과 소개 내용을 완성하세요. 아래 id는 API 연결에 사용하므로 유지하세요. -->
-<section><h2>프로젝트 소개</h2><p id="project-summary">TODO: 프로젝트 목적과 해결할 문제를 소개하세요.</p></section>
-<section><h2>주요 기능</h2><div id="project-features">TODO: 주요 기능을 구체적으로 작성하세요.</div></section>
-<section><h2>사용 기술</h2><p id="project-technology">TODO: 사용 기술과 역할을 적으세요.</p></section>
-<section><h2>팀 소개</h2><p>TODO: 팀원과 역할을 작성하세요.</p></section>
-<button id="download-button">소개 내용 다운로드 (.md)</button><button id="refresh-views">조회수 다시 확인</button><p id="message" class="result" aria-live="polite"></p>
-<footer><a href="/api/health">API 연결 확인</a><p>페이지를 열거나 새로고침하면 조회수가 증가합니다.</p></footer></main></body></html>
+과제 요구사항(id 유지, 누적 조회수 및 다운로드 버튼 유지)에 맞춰 학원 셔틀 및 학생 승하차 통합 관리 서비스 내용으로 정리한 index.html 전체 코드입니다.   week5_workout/nginx/html/index.html 파일 내용을 모두 지우고 아래 코드를 그대로 붙여넣어 저장하세요.   HTML<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>학원 셔틀 및 승하차 안심 케어 서비스</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">WEEK 5 · CAPSTONE</p>
+      <h1 id="project-title">학원 셔틀 및 승하차 안심 케어 서비스</h1>
+      <p>누적 조회수 <strong id="view-count">불러오는 중</strong></p>
+    </header>
+
+    <section>
+      <h2>프로젝트 소개</h2>
+      <p id="project-summary">
+        학원 원생들의 안전한 통학과 학부모의 불안 해소를 위해 실시간 셔틀버스 위치 추적 및 승하차 알림을 제공하는 모바일 기반 통합 모빌리티 관리 플랫폼입니다.
+      </p>
+    </section>
+
+    <section>
+      <h2>주요 기능</h2>
+      <div id="project-features">
+        <ul>
+          <li><strong>실시간 셔틀 위치 관제:</strong> GPS와 지도 API를 활용한 버스 실시간 이동 경로 확인</li>
+          <li><strong>승하차 안심 알림:</strong> 학생 탑승/하차 시 학부모 대상 실시간 푸시 메시지 전송</li>
+          <li><strong>원생 및 노선 관리:</strong> 학원 관리자용 탑승 명단 관리 및 셔틀 운행 노선 최적화</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>사용 기술</h2>
+      <p id="project-technology">
+        Frontend: React Native, Expo<br>
+        Backend: Node.js, Express, Flask API<br>
+        Database & Infra: SQLite, Nginx, Docker Compose, Kakao Mobility API
+      </p>
+    </section>
+
+    <section>
+      <h2>팀 소개</h2>
+      <p>
+        <strong>안심 셔틀 개발팀</strong><br>
+        • 화면 및 앱 개발: React Native 기반 모바일 UI/UX 및 실시간 지도 화면 구현<br>
+        • 백엔드 및 API 개발: 승하차 알림 및 위치 데이터 처리 REST API 구축<br>
+        • 인프라 및 배포: Docker Compose 환경 구성 및 웹 서버(Nginx) 프록시 연동
+      </p>
+    </section>
+
+    <button id="download-button">소개 내용 다운로드 (.md)</button>
+    <button id="refresh-views">조회수 다시 확인</button>
+    <p id="message" class="result" aria-live="polite"></p>
+
+    <footer>
+      <a href="/api/health">API 연결 확인</a>
+      <p>페이지를 열거나 새로고침하면 조회수가 증가합니다.</p>
+    </footer>
+  </main>
+</body>
+</html>
